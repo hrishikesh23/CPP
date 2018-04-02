@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Can I declare a static variable inside the destructor ?
+Yes !!!
+
+Does Destrcutor/Constructor returns anything ?
+NO !!
+
+Does DTOR/CTOR has this pointer ?
+Yes !!!
+
+When is CTOR called ?
+When u create an object !!!
+
+Can i call CTOR Explicitly ?
+NO !!!
+
+when is DTOR called ?
+when the object goes out of SCOPE !!!
+
+Can i call DTOR Explicitly ?
+YEs !!!! Care should be taken....
+
+
+Why Virtual DTOR should be used ??
+
+Breif Explanation !!!
+
+
+Are all functions within the class inlined ?
+

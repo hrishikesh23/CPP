@@ -1,0 +1,39 @@
+Issue :
+
+Case 1:
+
+virtual destructor is common function for objects created with default & parameterised ctor.
+
+initially Created object for default.
+calls default ctor. ptr is NULL.
+
+Now create object with parameter passing. calls the parameterised CTOR.
+
+ptr =  NULL
+allocate Memory.
+
+NOw...Sequence of Destructing..
+
+First Memory will be destructed for outer object..
+then memory will be destructed for inner object i.e default.
+
+in this Pointer is destructed twice.
+
+Avoid Pointer destructions : use check condition
+if(ptr != NULL)
+
+
+Case 2 :
+
+Now change the sequence of object creation....
+
+create object with parameterised ctor.[here memory is allocated]
+then create object with call to default ctor.[here ptr forced to nULL]
+
+
+
+
+
+
+
+

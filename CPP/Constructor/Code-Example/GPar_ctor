@@ -1,0 +1,6 @@
+
+
+Issue :
+
+when calling the T3.
+The virtual DTOR is not getting called
