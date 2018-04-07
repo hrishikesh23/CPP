@@ -7,6 +7,7 @@
 // Virtual function should be non-static members of the class
 // They cannot be friends
 // Finally ctor function cannot be virtual and destructor can be
+// if we do not over ride function of base class in derived then the base class virtual function will be called
 
 using namespace std;
 
