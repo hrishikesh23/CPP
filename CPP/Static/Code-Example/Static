@@ -1,0 +1,108 @@
+
+
+
+Reference :
+
+http://web-ext.u-aizu.ac.jp/~fayolle/teaching/2012/C++/pdf/2-static_member.pdf
+
+
+There are two types of static :
+
+1. Static Members
+2. Static methods
+
+
+Static members do not belong to the objects but to the class :
+
+--> static methods do not have access to the object pointers
+--> static data is shared by all instances of the class
+
+
+
+
+static methods : 
+contrary to regular methods, static methods can only access only static data
+static method do not have access to this pointer.	
+
+
+what is this pointer ?
+
+Inside a member function, a special variable named this acts as a pointer to current object.	
+This variable is passed to any member function as an hidden argument.
+
+
+Calling a static method is done by prefixing its name by the class name and :: (scope resolution operator)
+
+for a class A and static method f(); A::f();
+
+corresponds to a call to static method f() of the class A.
+
+Like any other methods static methods can access the public/private/protected data of class.
+
+
+Example usage :
+
+class A {
+
+private :
+
+int a;
+
+public :
+
+A() : a(0) {
+
+cout << " ctor called .. " << endl;
+
+static void()
+{
+
+cout << static method called << endl;
+
+}
+
+}
+
+
+
+};
+
+
+int main()
+{
+
+A::f(); --> will call static nethod.
+
+}
+
+
+
+Static data :
+
+Static variables and data members are shared among the instance of the class.
+static data members are similar to global variables but they have better protection provided by the class 
+a global variable is accessed by prefixing its name by the name of class and '::'
+
+for example class A and the member a can be accessed like A::a;
+
+
+static data member has same protection mechanism as other data members i.e a private static data member cannot be accessed from outside the 
+class.
+
+static data members cannot be initialised in the class defination.
+
+Initialisation of static data members :
+
+--> Static data member can not be initialized in the class defination.
+--> There is an exception to this rule. const static data can be initialized in the class defination.
+--> This is valid only for integral types. this is only valid for static const integral and not valid for static const float.
+
+
+static methods can also be used to :
+
+track the number of instances 	of class.
+for the factory design pattern
+to share resources between objects.		
+
+
+
