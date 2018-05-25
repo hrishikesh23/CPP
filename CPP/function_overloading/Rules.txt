@@ -1,0 +1,48 @@
+
+
+Defination of Function Overloading:
+Function Overloading is a logical method for calling several functions with different arguments and data types for performing similar activities or operations on expressions.
+
+Rules 1:
+Function overloading shall not be performed on arguments of same data type like
+
+void foo(int i)
+void foo(&int i)
+
+Compiler resolves this as same data type.
+
+Rule 2:
+
+In Funcion overloading the argument passed to the function shall not be differentiated with pointer and base address.
+
+void foo(array); // *
+void foo(&array) // []
+
+Rule 3:
+
+Function overloading shall allow a data type as int and enum.
+
+void foo(int i);
+void foo(ENUM i);
+
+Rule 4:
+
+Function overloading shall have different data types.
+
+void foo(int i);
+void foo(float i);
+
+Rule 5:
+
+Function overloading shall have different number of arguments.
+
+void foo(int i);
+void foo(int j,float k);
+
+
+
+
+
+
+
+
